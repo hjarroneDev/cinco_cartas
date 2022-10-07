@@ -1,4 +1,7 @@
+import 'package:appinio_swiper/appinio_swiper.dart';
+import 'package:cinco_cartas/Page/Home/Widget/carta_nova.dart';
 import 'package:flutter/material.dart';
+import 'package:swipe_widget/swipe_widget.dart';
 import '../User/usuarios.dart';
 import 'Widget/carta_frente.dart';
 import 'Widget/carta_verso.dart';
@@ -14,6 +17,64 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    List<CartaFrente> cards = [
+      CartaFrente(
+        value: '1',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+      CartaFrente(
+        value: 'A',
+        icon: Icons.heart_broken_rounded,
+        color: Colors.red.shade300,
+      ),
+    ];
+
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -65,105 +126,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.only(top: 1.6 * 8),
                         child: CartaVerso(),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 1.6 * 9),
-                        child: CartaVerso(),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 1.6 * 10),
-                        child: CartaVerso(),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      CartaFrente(
-                        value: 'A',
-                        icon: Icons.heart_broken_rounded,
-                        color: Colors.red.shade300,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 1),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
+                      SwipeWidget(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 1.6 * 9),
+                          child: CartaVerso(),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 2),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 3),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 4),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 5),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 6),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 7),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 8),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 9),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 1.6 * 10),
-                        child: CartaFrente(
-                          value: 'A',
-                          icon: Icons.heart_broken_rounded,
-                          color: Colors.red.shade300,
+                      SwipeWidget(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 1.6 * 10),
+                          child: CartaVerso(),
                         ),
                       ),
                     ],
                   ),
+                  SizedBox(
+                      height: 300,
+                      width: 200,
+                      child: AppinioSwiper(cards: cards)),
                 ],
               ),
               const Spacer(),
