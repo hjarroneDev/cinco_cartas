@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CartaVerso extends StatefulWidget {
-  const CartaVerso({super.key});
+  const CartaVerso({
+    super.key,
+  });
 
   @override
   State<CartaVerso> createState() => _CartaVersoState();
