@@ -4,6 +4,7 @@ class CartaUsada extends StatefulWidget {
   final IconData icon;
   final String value;
   final Color color;
+
   const CartaUsada(
       {super.key,
       required this.icon,

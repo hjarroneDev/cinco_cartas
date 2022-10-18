@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CartaVerso extends StatefulWidget {
+  final IconData icon;
+  final String value;
+  final Color color;
+
   const CartaVerso({
     super.key,
+    required this.icon,
+    required this.value,
+    required this.color,
   });
 
   @override

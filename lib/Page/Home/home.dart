@@ -3,6 +3,7 @@ import '../User/usuarios.dart';
 import 'Widget/princimpal/carta_usada.dart';
 import 'Widget/princimpal/carta_verso.dart';
 import 'Widget/princimpal/cartas.dart';
+import 'Widget/widget/lista_cartas.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -12,31 +13,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<int> naoUsada = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
-  ];
-  List<int> usadas = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
-  List<int> minhas = [31, 32, 33, 34, 35, 36];
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -57,12 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 300,
                     width: 150,
                     child: ListView.builder(
-                        itemCount: naoUsada.length,
+                        itemCount: cartasNaoUsada.length,
                         itemBuilder: ((context, index) {
-                          return const Align(
+                          return Align(
                             alignment: Alignment.topCenter,
                             heightFactor: 0.003,
-                            child: CartaVerso(),
+                            child: CartaVerso(
+                              value: cartasNaoUsada[index].value,
+                              icon: cartasNaoUsada[index].icon,
+                              color: cartasNaoUsada[index].color,
+                            ),
                           );
                         })),
                   ),
@@ -70,18 +50,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 300,
                     width: 150,
                     child: ListView.builder(
-                        itemCount: usadas.length,
-                        itemBuilder: ((context, index) {
-                          return Align(
-                            alignment: Alignment.topCenter,
-                            heightFactor: 0.003,
-                            child: CartaUsada(
-                              value: 'A',
-                              icon: Icons.heart_broken_rounded,
-                              color: Colors.red.shade300,
-                            ),
-                          );
-                        })),
+                      itemCount: cartasUsada.length,
+                      itemBuilder: ((context, index) {
+                        return Align(
+                          alignment: Alignment.topCenter,
+                          heightFactor: 0.003,
+                          child: CartaUsada(
+                            value: cartasUsada[index].value,
+                            icon: cartasUsada[index].icon,
+                            color: cartasUsada[index].color,
+                          ),
+                        );
+                      }),
+                    ),
                   ),
                 ],
               ),
