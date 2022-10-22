@@ -38,68 +38,69 @@ class _CartaVersoState extends State<CartaVerso> {
             ],
           ),
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Icon(
-                        Icons.heart_broken_rounded,
-                        size: 25,
-                        color: Colors.black26,
-                      ),
-                      Icon(
-                        Icons.api_rounded,
-                        size: 25,
-                        color: Colors.black26,
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Icon(
-                      Icons.filter_5_rounded,
-                      size: 45,
+                      Icons.heart_broken_rounded,
+                      size: 25,
                       color: Colors.black26,
                     ),
-                    Center(
-                      child: Text(
-                        'Cartas',
-                        style: TextStyle(
-                          color: Colors.black26,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          //decorationStyle: TextDecorationStyle.double,
-                          fontSize: 25,
-                        ),
-                      ),
+                    Icon(
+                      Icons.api_rounded,
+                      size: 25,
+                      color: Colors.black26,
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Icon(
-                        Icons.navigation_rounded,
-                        size: 25,
-                        color: Colors.black26,
-                      ),
-                      Icon(
-                        Icons.spa_rounded,
-                        size: 25,
-                        color: Colors.black26,
-                      ),
-                    ],
+              ),
+              Column(
+                children: const [
+                  Icon(
+                    Icons.filter_5_rounded,
+                    size: 45,
+                    color: Colors.black26,
                   ),
+                  Center(
+                    child: Text(
+                      'Cartas',
+                      style: TextStyle(
+                        color: Colors.black26,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        //decorationStyle: TextDecorationStyle.double,
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.navigation_rounded,
+                      size: 25,
+                      color: Colors.black26,
+                    ),
+                    Icon(
+                      Icons.spa_rounded,
+                      size: 25,
+                      color: Colors.black26,
+                    ),
+                  ],
                 ),
-              ]),
+              ),
+            ],
+          ),
         ),
       ),
     );
